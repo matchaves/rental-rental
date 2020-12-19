@@ -1,0 +1,12 @@
+com/dvdrental/rental/RentalApplication.java
+ com.dvdrental.rental.RentalApplication
+com/dvdrental/rental/model/Film.java
+ com.dvdrental.rental.model.Film
+com/dvdrental/rental/model/Rental.java
+ com.dvdrental.rental.model.Rental
+com/dvdrental/rental/controller/RentalController.java
+ com.dvdrental.rental.controller.RentalController
+com/dvdrental/rental/repository/RentalRepository.java
+ com.dvdrental.rental.repository.RentalRepository
+com/dvdrental/rental/service/RentalService.java
+ com.dvdrental.rental.service.RentalService
