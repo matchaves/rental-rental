@@ -1,6 +1,8 @@
 package com.dvdrental.rental.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -8,6 +10,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
+@Getter
+@NoArgsConstructor
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

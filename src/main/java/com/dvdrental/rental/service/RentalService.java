@@ -2,6 +2,8 @@ package com.dvdrental.rental.service;
 
 
 
+import com.dvdrental.rental.client.FilmClient;
+import com.dvdrental.rental.client.PaymentClient;
 import com.dvdrental.rental.model.Rental;
 import com.dvdrental.rental.repository.RentalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,12 @@ public class RentalService {
     @Autowired
     private RentalRepository rentalRepository;
 
+    @Autowired
+    private PaymentClient paymentClient;
+
+    @Autowired
+    private FilmClient filmClient;
+
     public List<Rental> getFilms() {
         List<Rental> list = rentalRepository.findAll();//.stream().map(FilmDto::create).collect(Collectors.toList());
         return list;
@@ -26,9 +34,13 @@ public class RentalService {
         return film;
     }
 
-    public void setRentalPre(Long inventory_id, Long customer_id, Long staff_id) {
-        rentalRepository.setRentalPre(inventory_id, customer_id, staff_id);//.stream().map(FilmDto::create).collect(Collectors.toList());
-
+    public void setRentalPre(Long inventory_id, Long customer_id, Long staff_id, Long film_id) {
+        Integer rental_id = rentalRepository.setRentalPre(inventory_id, customer_id, staff_id);//.stream().map(FilmDto::create).collect(Collectors.toList());
+        //System.out.print(rental_id);
+        //Object film = filmClient.filmCost(film_id);
+        //System.out.print(film);
+        //paymentClient.payment(rental_id.longValue());
+        //paymentClient.payment(rental_id::longValue);
     }
 
     public void setRentalSucces(Long inventory_id) {

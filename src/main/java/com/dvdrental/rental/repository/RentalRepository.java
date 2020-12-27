@@ -19,10 +19,9 @@ public interface RentalRepository extends JpaRepository<Rental, Long> {
 
     Optional<Rental> findById(Long id);
 
-    @Modifying
-    @Transactional
-    @Query(value = "INSERT INTO public.rental (rental_date, inventory_id, customer_id, staff_id, last_update, status) VALUES (now(), ?1, ?2, ?3, now(), 'processando')", nativeQuery = true)
-    void setRentalPre(Long inventory_id, Long customer_id, Long staff_id);
+
+    @Query(value = "INSERT INTO public.rental (rental_date, inventory_id, customer_id, staff_id, last_update, status) VALUES (now(), ?1, ?2, ?3, now(), 'processando') returning rental_id", nativeQuery = true)
+    Integer setRentalPre(Long inventory_id, Long customer_id, Long staff_id);
 
     @Modifying
     @Transactional

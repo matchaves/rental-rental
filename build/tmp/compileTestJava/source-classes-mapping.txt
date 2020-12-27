@@ -1,0 +1,2 @@
+com/dvdrental/rental/RentalApplicationTests.java
+ com.dvdrental.rental.RentalApplicationTests
