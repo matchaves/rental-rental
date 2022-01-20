@@ -6,6 +6,7 @@ base-path /rental
 
 ALTERAR ESSE METODO PARA POST POIS É UMA INSERÇÃO DE REGISTRO
 ```
+<<<<<<< HEAD
 POSt /rentalpre
 esse endpoint faz uma pré-alocação do registrando na tabela rental um registro com
 status "processando"
@@ -20,6 +21,16 @@ status "processando"
 TO-DO ALTERAR ESSE METEDO
 ```
 PATCH /rentalsucces?rental_id=X&status="aprovado||negado"
+=======
+GET /rentalpre/{inventory}/{customer}/{staff}/{film}
+esse endpoint faz uma pré-alocação do registrando na tabela rental um registro com
+status "processando"
+```
+
+TO-DO ALTERAR ESSE METEDO PARA PATCH POIS É UMA ALTERAÇÃO 
+```
+GET /rentalsucces/{inventory}
+>>>>>>> main
 esse endpoint recebe o ok da api de PAGAMENTO e atualizar o status do registro
 do endpoint acima como "sucesso"
 ```
