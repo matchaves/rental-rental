@@ -8,14 +8,16 @@ com/dvdrental/rental/model/Rental.java
  com.dvdrental.rental.model.Rental
 com/dvdrental/rental/client/PaymentClient.java
  com.dvdrental.rental.client.PaymentClient
+com/dvdrental/rental/dto/PaymentDto.java
+ com.dvdrental.rental.dto.PaymentDto
+ com.dvdrental.rental.dto.PaymentDto$PaymentDtoBuilder
+com/dvdrental/rental/model/Film.java
+ com.dvdrental.rental.model.Film
+com/dvdrental/rental/dto/RentalDto.java
+ com.dvdrental.rental.dto.RentalDto
 com/dvdrental/rental/controller/RentalController.java
  com.dvdrental.rental.controller.RentalController
 com/dvdrental/rental/repository/RentalRepository.java
  com.dvdrental.rental.repository.RentalRepository
 com/dvdrental/rental/service/RentalService.java
  com.dvdrental.rental.service.RentalService
-com/dvdrental/rental/model/Film.java
- com.dvdrental.rental.model.Film
-com/dvdrental/rental/dto/PaymentDto.java
- com.dvdrental.rental.dto.PaymentDto
- com.dvdrental.rental.dto.PaymentDto$PaymentDtoBuilder
