@@ -25,13 +25,13 @@ public interface RentalRepository extends JpaRepository<Rental, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE rental SET status = 'aprovado' WHERE inventory_id = ?1 AND status = 'processando'", nativeQuery = true)
-    void setRentalSucces(Long inventory_id);
+    @Query(value = "UPDATE rental SET status = ?2 WHERE rental_id = ?1 AND status = 'processando'", nativeQuery = true)
+    void setRentalSucces(Long inventory_id, String status);
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE rental SET return_date = now() WHERE inventory_id = ?1 AND status = 'aprovado' and return_date is null and customer_id = ?2 ", nativeQuery = true)
-    void setRentalReturn(Long inventory_id, Long customer_id);
+    @Query(value = "UPDATE rental SET return_date = now() WHERE rental_id = ?1 AND status = 'aprovado' and return_date is null", nativeQuery = true)
+    void setRentalReturn(Long rental_id);
 
 
 }
