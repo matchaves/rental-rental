@@ -36,7 +36,7 @@ public class RentalService {
     }
 
     public void setRentalPre(RentalDto rental) {
-        Integer rental_id = rentalRepository.setRentalPre(rental.getInventory_id(), rental.getCustomer_id(), rental.getStaff_id()); //inventory_id, customer_id, staff_id//.stream().map(FilmDto::create).collect(Collectors.toList());
+        rentalRepository.setRentalPre(rental.getInventory_id(), rental.getCustomer_id(), rental.getStaff_id()); //inventory_id, customer_id, staff_id//.stream().map(FilmDto::create).collect(Collectors.toList());
         //System.out.print(rental_id);
         //Object film = filmClient.filmCost(film_id);
         //System.out.print(film);
