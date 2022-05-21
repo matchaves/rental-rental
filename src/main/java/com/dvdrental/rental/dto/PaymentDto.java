@@ -15,7 +15,4 @@ public class PaymentDto {
     private Long rental;
     private Long amount;
 
-
-
-
 }
